@@ -1,0 +1,14 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of employeeList$|async">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+        </tr>
+    </tbody>
+</table>
