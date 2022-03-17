@@ -9,7 +9,7 @@ export class EmployeeApiService {
 
   // Url listening for action 
   readonly employeeAPIUrl = "https://localhost:44300/api";
-  readonly taskAPIUrl = "https://localhost:44300/api";
+  readonly taskAPIUrl = "https://localhost:44300/task";
 
   private controllerNameEmployee = "employees";
   private controllerNameTask = "task";
@@ -23,6 +23,7 @@ export class EmployeeApiService {
   }
 
   addEmployee(data:any){
+    console.log(data);
     return this.http.post(this.employeeAPIUrl + '/' + this.controllerNameEmployee + '/add', data);
   }
 
